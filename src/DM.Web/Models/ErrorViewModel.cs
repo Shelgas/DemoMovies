@@ -1,4 +1,4 @@
-namespace DemoTickets.Models;
+namespace DT.Web.Models;
 
 public class ErrorViewModel
 {
