@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DM.Infrastructure.Persistance.Repository
 {
-    abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         protected DmContext _context { get; set; }
         public RepositoryBase(DmContext context)

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DM.Infrastructure.Persistance
 {
-    internal class DmContext : DbContext
+    public class DmContext : DbContext
     {
         public DmContext(DbContextOptions options) : base(options)
         {
