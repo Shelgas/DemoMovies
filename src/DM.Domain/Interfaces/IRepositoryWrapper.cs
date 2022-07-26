@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DM.Domain.Interfaces
+{
+    public interface IRepositoryWrapper
+    {
+        IMovieRepository Movie { get; }
+        IActorRepository Actor { get; }
+        Task SaveAsync();
+    }
+}
