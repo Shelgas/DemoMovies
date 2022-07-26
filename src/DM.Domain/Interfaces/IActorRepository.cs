@@ -8,11 +8,11 @@ namespace DM.Domain.Interfaces
 {
     public interface IActorRepository : IRepositoryBase<Actor>
     {
-        Task<IEnumerable<Actor>> GetAllOwnersAsync();
-        Task<Actor> GetOwnerByIdAsync(Guid actorId);
-        Task<Actor> GetOwnerWithDetailsAsync(Guid actorId);
-        void CreateOwner(Actor actor);
-        void UpdateOwner(Actor actor);
-        void DeleteOwner(Actor actor);
+        Task<IEnumerable<Actor>> GetAllActorsAsync();
+        Task<Actor> GetActorByIdAsync(Guid actorId);
+        Task<Actor> GetActorWithDetailsAsync(Guid actorId);
+        void CreateActor(Actor actor);
+        void UpdateActor(Actor actor);
+        void DeleteActor(Actor actor);
     }
 }

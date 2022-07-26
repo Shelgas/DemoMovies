@@ -9,11 +9,11 @@ namespace DM.Domain.Interfaces
 {
     public interface IMovieRepository : IRepositoryBase<Movie>
     {
-        Task<IEnumerable<Movie>> GetAllOwnersAsync();
-        Task<Movie> GetOwnerByIdAsync(Guid movieId);
-        Task<Movie> GetOwnerWithDetailsAsync(Guid movieId);
-        void CreateOwner(Movie movie);
-        void UpdateOwner(Movie movie);
-        void DeleteOwner(Movie movie);
+        Task<IEnumerable<Movie>> GetAllMoviesAsync();
+        Task<Movie> GetMovieByIdAsync(Guid movieId);
+        Task<Movie> GetMovieWithDetailsAsync(Guid movieId);
+        void CreateMovie(Movie movie);
+        void UpdateMovie(Movie movie);
+        void DeleteMovie(Movie movie);
     }
 }
