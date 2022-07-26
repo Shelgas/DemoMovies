@@ -17,5 +17,7 @@ namespace DM.Domain.Entities
         public string PictureURL { get; set; }
         public string FullName { get; set; }
         public string Bio { get; set; }
+
+        public virtual ICollection<Movie> Movies { get; set; }
     }
 }

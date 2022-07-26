@@ -1,12 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DT.Domain.Entities
+namespace DM.Domain.Entities
 {
-    internal class Movie
+    public class Movie
     {
+        [Key]
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public double Price { get; set; }
+        public string ImageURL { get; set; }
+        public DateTime Date { get; set; }
+
+        public ICollection<Actor> Actors { get; set; }
     }
 }
