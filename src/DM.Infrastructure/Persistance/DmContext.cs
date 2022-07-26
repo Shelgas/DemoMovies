@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using DM.Domain.Entities;
+﻿global using DM.Domain.Interfaces;
+global using DM.Domain.Entities;
+
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,7 @@ namespace DM.Infrastructure.Persistance
             Database.EnsureCreated();
         }
 
-        public DbSet<Actor> Actors { get; set; }
-        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Actor>? Actors { get; set; }
+        public DbSet<Movie>? Movies { get; set; }
     }
 }
