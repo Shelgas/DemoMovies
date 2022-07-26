@@ -25,16 +25,26 @@ namespace DM.Infrastructure.Persistance.Repository
             }
         }
 
-        public IActorRepository Actor => throw new NotImplementedException();
+        public IActorRepository Actor
+        {
+            get
+            {
+                if (_actor == null)
+                {
+                    _actor = new ActorRepository(_context);
+                }
+                return _actor;
+            }
+        }
 
         public RepositoryWrapper(DmContext context)
         {
             this._context = context;
         }
 
-        public Task SaveAsync()
+        public async Task SaveAsync()
         {
-            throw new NotImplementedException();
+            await _context.SaveChangesAsync();
         }
     }
 }
