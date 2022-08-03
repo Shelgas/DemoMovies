@@ -10,7 +10,7 @@ namespace DM.Domain.Entities
     public class Actor
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Display(Name = "Profile Picture")]
         [Required(ErrorMessage = "Profile Picture is required")]

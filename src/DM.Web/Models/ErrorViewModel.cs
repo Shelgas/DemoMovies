@@ -1,4 +1,4 @@
-namespace DT.Web.Models;
+namespace DM.Web.Models;
 
 public class ErrorViewModel
 {

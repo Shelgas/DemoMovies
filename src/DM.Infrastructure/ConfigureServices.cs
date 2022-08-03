@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DM.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
+using DM.Infrastructure.Persistance.Repository;
 
 namespace DM.Infrastructure
 {
@@ -20,7 +21,7 @@ namespace DM.Infrastructure
             {
                 options.UseNpgsql(configuration.GetConnectionString("Dmdb"));
             });
-            //services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
             return services;
         }
     }
